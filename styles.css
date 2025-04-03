@@ -1,0 +1,126 @@
+/* Общие стили */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f2f7fb;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  /* Хедер */
+  .header {
+    text-align: center;
+    padding: 15px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  
+  /* Контейнер формы */
+  .container {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 20px auto;
+  }
+  
+  /* Заголовок */
+  h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Форма */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, select, button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #0056b3;
+  }
+  
+  input:disabled {
+    background-color: #eee;
+  }
+  
+  select {
+    background-color: #fff;
+  }
+  
+  /* Радиогруппы */
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .radio-group label {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Кнопка отправки */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+  }
+  
+  /* Футер */
+  footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 15px 0;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Медиа-запросы для адаптивности */
+  @media (max-width: 480px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+    input, select, button {
+      font-size: 14px;
+      padding: 8px;
+    }
+    .radio-group {
+      flex-direction: column;
+    }
+  }
+  

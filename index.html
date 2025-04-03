@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Midea - Заявка на кондиционер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="./img/Midea_logo.png" alt="Midea" class="logo">
+  </header>
+  <main class="container">
+    <h2>Заявка на кондиционер Midea</h2>
+    <form id="orderForm">
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="clientType" value="Физическое лицо" checked>
+          Физическое лицо
+        </label>
+        <label>
+          <input type="radio" name="clientType" value="Юридическое лицо">
+          Юридическое лицо
+        </label>
+      </div>
+
+      <!-- Физическое лицо -->
+      <div id="physicalFields">
+        <input type="text" id="fullName" name="fullName" placeholder="ФИО" required>
+        <input type="tel" id="phone" name="phone" placeholder="+998 (90) 788-04-78" required>
+        <input type="text" id="city" name="city" placeholder="Город" list="uzbekRegions" required>
+        <datalist id="uzbekRegions">
+          <option value="Ташкентская область">
+          <option value="Самаркандская область">
+          <option value="Бухарская область">
+          <option value="Ферганская область">
+          <option value="Наманганская область">
+          <option value="Андижанская область">
+          <option value="Кашкадарьинская область">
+          <option value="Сурхандарьинская область">
+          <option value="Навоийская область">
+          <option value="Хорезмская область">
+          <option value="Джизакская область">
+        </datalist>
+      </div>
+
+      <!-- Юридическое лицо -->
+      <div id="legalFields" style="display: none;">
+        <input type="text" id="companyName" name="companyName" placeholder="Название компании" required disabled>
+        <input type="tel" id="companyPhone" name="companyPhone" placeholder="+998 (90) 788-04-78" required disabled>
+        <input type="text" id="email" name="email" placeholder="Email (без @gmail.com)" required disabled>
+        <input type="text" id="companyCity" name="companyCity" placeholder="Город" list="uzbekRegions" required disabled>
+      </div>
+
+      <select id="airconType" name="airconType" required>
+        <option value="" disabled selected>Выберите тип кондиционера</option>
+        <option value="Настенный">Настенный</option>
+        <option value="Полупромышленный (кассетный)">Полупромышленный (кассетный)</option>
+        <option value="Полупромышленный (канальный)">Полупромышленный (канальный)</option>
+        <option value="Промышленный">Промышленный</option>
+      </select>
+
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="installationPlace" value="Дом" required>
+          Дом
+        </label>
+        <label>
+          <input type="radio" name="installationPlace" value="Офис" required>
+          Офис
+        </label>
+      </div>
+
+      <input type="number" id="area" name="area" placeholder="Площадь (м²)" required>
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2025 Midea. Все права защищены.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
